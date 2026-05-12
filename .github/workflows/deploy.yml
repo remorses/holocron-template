@@ -2,6 +2,7 @@ name: Deploy
 on:
   push:
     branches: [main]
+  pull_request:
 
 permissions:
   id-token: write
@@ -12,7 +13,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     environment:
-      name: production
+      name: holocron
       url: ${{ steps.deploy.outputs.holocron_url }}
     steps:
       - uses: actions/checkout@v4
