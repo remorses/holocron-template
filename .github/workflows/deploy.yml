@@ -6,12 +6,20 @@ on:
 permissions:
   id-token: write
   contents: read
+  deployments: write
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: ${{ steps.deploy.outputs.holocron_url }}
     steps:
       - uses: actions/checkout@v4
       - uses: oven-sh/setup-bun@v2
       - run: bun install
-      - run: bun run build
+      - name: Deploy
+        id: deploy
+        run: bunx holocron deploy
+        env:
+          HOLOCRON_KEY: ${{ secrets.HOLOCRON_KEY }}
