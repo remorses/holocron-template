@@ -32,4 +32,5 @@ jobs:
           gh api repos/${{ github.repository }}/statuses/${{ github.sha }} \
             -f state=success \
             -f target_url="${{ steps.deploy.outputs.holocron_url }}" \
+            -f description="${{ steps.deploy.outputs.holocron_url }}" \
             -f context=holocron
