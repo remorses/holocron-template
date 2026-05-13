@@ -7,6 +7,7 @@ permissions:
   id-token: write
   contents: read
   deployments: write
+  statuses: write
 
 jobs:
   deploy:
@@ -23,3 +24,12 @@ jobs:
         run: bunx holocron deploy
         env:
           HOLOCRON_KEY: ${{ secrets.HOLOCRON_KEY }}
+      - name: Set commit status
+        if: steps.deploy.outputs.holocron_url
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api repos/${{ github.repository }}/statuses/${{ github.sha }} \
+            -f state=success \
+            -f target_url="${{ steps.deploy.outputs.holocron_url }}" \
+            -f context=holocron
