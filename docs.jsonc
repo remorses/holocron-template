@@ -1,6 +1,7 @@
 {
   "$schema": "https://unpkg.com/@holocron.so/vite/src/schema.json",
   "name": "My Docs",
+  "favicon": "/favicon.ico",
   "colors": {
     "primary": "#6366f1"
   },
