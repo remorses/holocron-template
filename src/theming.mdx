@@ -18,9 +18,9 @@ Holocron follows the standard shadcn/ui v2 naming convention for all CSS tokens.
 
 ## Primary color
 
-Set a brand color in `docs.json`. This controls links, active states, and branded elements:
+Set a brand color in `docs.jsonc`. This controls links, active states, and branded elements:
 
-```json
+```jsonc
 {
   "colors": {
     "primary": "#6366f1"
@@ -30,7 +30,7 @@ Set a brand color in `docs.json`. This controls links, active states, and brande
 
 You can also specify separate light and dark mode accent variants:
 
-```json
+```jsonc
 {
   "colors": {
     "primary": "#6366f1",
@@ -48,7 +48,7 @@ Mintlify names these by the shade, not the mode: `colors.dark` is used in light 
 
 Control the default color mode and whether users can toggle:
 
-```json
+```jsonc
 {
   "appearance": {
     "default": "system",

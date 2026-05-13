@@ -14,7 +14,7 @@ pnpm install
 pnpm dev
 ```
 
-Edit MDX pages in `src/`, configure navigation and theming in `docs.json`.
+Edit MDX pages in `src/`, configure navigation and theming in `docs.jsonc`.
 
 ## Deploy
 

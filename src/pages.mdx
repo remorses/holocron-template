@@ -6,12 +6,12 @@ icon: file-text
 
 # Pages and Frontmatter
 
-Every page in a Holocron site is an **MDX file** (`.mdx` or `.md`). Pages are discovered through the navigation config in `docs.json`, not by filesystem convention.
+Every page in a Holocron site is an **MDX file** (`.mdx` or `.md`). Pages are discovered through the navigation config in `docs.jsonc`, not by filesystem convention.
 
 <Aside>
 
 <Note>
-Only pages listed in `docs.json` navigation appear in the sidebar. Creating an MDX file alone is not enough.
+Only pages listed in `docs.jsonc` navigation appear in the sidebar. Creating an MDX file alone is not enough.
 </Note>
 
 </Aside>
@@ -26,9 +26,9 @@ The slug is the file path relative to `pagesDir` (e.g. `src/`), without the exte
 | `src/quickstart.mdx` | `quickstart` | `/quickstart` |
 | `src/guides/auth.mdx` | `guides/auth` | `/guides/auth` |
 
-Reference these slugs in your `docs.json`:
+Reference these slugs in your `docs.jsonc`:
 
-```json
+```jsonc
 {
   "navigation": [
     {

@@ -36,10 +36,10 @@ icon: zap
     ```
   </Step>
 
-  <Step title='Create docs.json' icon='file-json'>
+  <Step title='Create docs.jsonc' icon='file-json'>
     Define your site name and navigation structure:
 
-    ```json
+    ```jsonc
     {
       "name": "My Docs",
       "colors": { "primary": "#6366f1" },
@@ -98,7 +98,7 @@ my-docs/
 ├── src/
 │   ├── index.mdx      # your pages
 │   └── quickstart.mdx
-├── docs.json          # site config and navigation
+├── docs.jsonc         # site config and navigation
 ├── vite.config.ts     # holocron({ pagesDir: './src' })
 ├── package.json
 └── public/            # static assets (logos, images)
