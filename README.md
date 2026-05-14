@@ -19,7 +19,7 @@ Edit MDX pages in `src/`, configure navigation and theming in `docs.jsonc`.
 ## Deploy
 
 ```bash
-npx holocron deploy
+npx -y @holocron.so/cli deploy
 ```
 
 A GitHub Actions workflow is included at `.github/workflows/deploy.yml` for automatic deploys on every push.
