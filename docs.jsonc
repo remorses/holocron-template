@@ -57,12 +57,14 @@
         {
           "anchor": "GitHub",
           "href": "https://github.com/remorses/holocron",
-          "icon": "github"
+          "icon": "github",
+          "placement": "tabs"
         },
         {
           "anchor": "Changelog",
           "href": "https://github.com/remorses/holocron/releases",
-          "icon": "newspaper"
+          "icon": "newspaper",
+          "placement": "tabs"
         }
       ]
     }
