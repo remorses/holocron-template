@@ -24,6 +24,10 @@ jobs:
         run: bunx holocron deploy
         env:
           HOLOCRON_KEY: ${{ secrets.HOLOCRON_KEY }}
+          # Allows the changelog tab to read releases from this repo (and
+          # raises the GitHub API rate limit from 60 to 5,000 req/hr).
+          # For a different private repo, use a fine-grained PAT secret instead.
+          GITHUB_TOKEN: ${{ github.token }}
       - name: Set commit status
         if: steps.deploy.outputs.holocron_url
         env:
