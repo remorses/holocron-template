@@ -13,10 +13,10 @@ Every page in a Holocron site is an **MDX file** (`.mdx` or `.md`). Pages are di
 
 The slug is the file path relative to `pagesDir` (e.g. `src/`), without the extension:
 
-| File path | Slug | URL |
-|-----------|------|-----|
-| `src/index.mdx` | `index` | `/` |
-| `src/quickstart.mdx` | `quickstart` | `/quickstart` |
+| File path             | Slug          | URL            |
+| --------------------- | ------------- | -------------- |
+| `src/index.mdx`       | `index`       | `/`            |
+| `src/quickstart.mdx`  | `quickstart`  | `/quickstart`  |
 | `src/guides/auth.mdx` | `guides/auth` | `/guides/auth` |
 
 Reference these slugs in your `docs.jsonc`:
@@ -56,18 +56,18 @@ tag: New
 
 ### Supported fields
 
-| Field | Type | Description |
-|-------|------|-------------|
-| `title` | string | Page title, used in sidebar and `<title>` tag |
-| `description` | string | SEO description and subtitle |
-| `icon` | string | Icon displayed next to the page in sidebar |
-| `sidebarTitle` | string | Override the title shown in sidebar |
-| `tag` | string | Badge label next to the title in sidebar |
-| `hidden` | boolean | Hides the page from navigation |
-| `noindex` | boolean | Prevents search engines from indexing |
-| `og:title` | string | Open Graph title override |
-| `og:description` | string | Open Graph description |
-| `og:image` | string | Open Graph image URL |
+| Field            | Type    | Description                                   |
+| ---------------- | ------- | --------------------------------------------- |
+| `title`          | string  | Page title, used in sidebar and `<title>` tag |
+| `description`    | string  | SEO description and subtitle                  |
+| `icon`           | string  | Icon displayed next to the page in sidebar    |
+| `sidebarTitle`   | string  | Override the title shown in sidebar           |
+| `tag`            | string  | Badge label next to the title in sidebar      |
+| `hidden`         | boolean | Hides the page from navigation                |
+| `noindex`        | boolean | Prevents search engines from indexing         |
+| `og:title`       | string  | Open Graph title override                     |
+| `og:description` | string  | Open Graph description                        |
+| `og:image`       | string  | Open Graph image URL                          |
 
 ## MDX basics
 
